@@ -1,4 +1,6 @@
-const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=Ghaziabad';
+const city = 'london'
+async function updateweather(city) {
+	const url = 'https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=london';
 const options = {
 	method: 'GET',
 	headers: {
@@ -10,7 +12,11 @@ const options = {
 try {
 	const response = await fetch(url, options);
 	const result = await response.text();
-	console.log(result);
+	const data = result.json();
+	console.log(data);
 } catch (error) {
-	console.error(error); 
+	console.log("error is coming");
 }
+}
+
+updateweather(city);
