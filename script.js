@@ -12,5 +12,5 @@ try {
 	const result = await response.text();
 	console.log(result);
 } catch (error) {
-	console.error(error);
+	console.error(error); 
 }
